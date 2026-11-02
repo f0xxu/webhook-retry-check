@@ -1,0 +1,10 @@
+Captured local synthetic demonstration, 2 November 2026.
+Runtime: Node.js 24.22.1. No external service or client data.
+
+broken: HTTP 200, 200, 200 | counter 0 -> 3 | FAIL
+safe: HTTP 200, 200, 200 | counter 0 -> 1 | PASS
+blind: HTTP no POSTs | counter unknown -> unknown | INCONCLUSIVE
+
+PASS describes only the tested scenario and observation window.
+The safe demo is in-memory, not a durable production implementation.
+Reproduce: npm run demo
