@@ -1,0 +1,24 @@
+{
+  "name": "webhook-retry-check",
+  "version": "0.1.0",
+  "description": "A local regression check for duplicate webhook effects, with an independent result counter.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "webhook-retry-check": "./cli.mjs"
+  },
+  "exports": {
+    ".": "./check.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo.mjs",
+    "demo:safe": "node demo-server.mjs --mode safe --port 8787",
+    "demo:broken": "node demo-server.mjs --mode broken --port 8787",
+    "demo:blind": "node demo-server.mjs --mode blind --port 8787"
+  }
+}
